@@ -184,7 +184,7 @@ Final: ${finalScore}`;
 // ====== Juego 1: Flappy (con física afinada y gracia inicial) ======
 function makeFlappy(){
   const W=60, H=20, GROUND=H-2;
-  let grid=[], bird, cols=[], gapBase=6, spawnEvery=22, gravity=0.22, firstInput=false;
+  let grid=[], bird, cols=[], gapBase=6, spawnEvery=22, gravity=0.35, firstInput=false;
 
   function clear(){ grid = Array.from({length:H}, ()=> Array.from({length:W}, ()=> ' ')); }
   function put(x,y,ch){ if (x>=0&&x<W&&y>=0&&y<H) grid[y][x]=ch; }
@@ -213,7 +213,7 @@ function makeFlappy(){
       clear(); cols=[]; bird={x:8,y:Math.floor(H/2),vy:0}; firstInput=false;
       // Física más amable por dificultad
       const baseMs = d.label==='easy' ? 90 : d.label==='normal' ? 70 : d.label==='hard' ? 58 : 48;
-      gravity = d.label==='easy' ? 0.18 : d.label==='normal' ? 0.22 : d.label==='hard' ? 0.26 : 0.30;
+      gravity = 0.35;
       st.tickMs = baseMs;
       spawnEvery = d.label==='easy' ? 28 : d.label==='normal' ? 22 : d.label==='hard' ? 18 : 14;
       gapBase = d.label==='insane' ? 5 : 6;
