@@ -16,7 +16,6 @@
   </header>
 
   <main>
-    <!-- NOTA: cada juego tiene su propio leaderboard local (Top 10) -->
     <!-- ==== FLAPPY ==== -->
     <section class="card" id="flappy">
       <h2>ASCII Flappy</h2>
@@ -25,6 +24,12 @@
         <div class="cell"><strong>Score:</strong> <span id="flappy-score">0 → ×1.25</span></div>
         <div class="cell"><strong>Total:</strong> <span id="flappy-total">0</span></div>
         <div class="cell"><strong>Dificultad:</strong> <span id="flappy-diff">normal ×1.25</span></div>
+        <div class="cell"><strong>Modo:</strong> 
+          <select id="flappy-mode">
+            <option value="marathon" selected>Marathon</option>
+            <option value="practice">Practice</option>
+          </select>
+        </div>
         <div class="cell"><strong>Estado:</strong> <span id="flappy-status">listo</span></div>
       </div>
       <div class="row">
@@ -41,7 +46,7 @@
         <span class="tag">Controles: Space/↑ (saltar) · P (pausa)</span>
       </div>
       <pre id="flappy-screen" class="screen">Ready.</pre>
-      <div class="help">Puntaje final = obstáculos superados × multiplicador.</div>
+      <div class="help">“Tap-to-start”: el juego comienza con tu primer salto.</div>
 
       <div class="lb">
         <div class="lb-head">
@@ -49,7 +54,7 @@
           <button id="flappy-reset" class="btn danger">Reset</button>
         </div>
         <table>
-          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th></tr></thead>
+          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th><th>Seed</th></tr></thead>
           <tbody id="flappy-lb"></tbody>
         </table>
       </div>
@@ -63,6 +68,12 @@
         <div class="cell"><strong>Score:</strong> <span id="snake-score">0 → ×1.25</span></div>
         <div class="cell"><strong>Total:</strong> <span id="snake-total">0</span></div>
         <div class="cell"><strong>Dificultad:</strong> <span id="snake-diff">normal ×1.25</span></div>
+        <div class="cell"><strong>Modo:</strong> 
+          <select id="snake-mode">
+            <option value="marathon" selected>Marathon</option>
+            <option value="practice">Practice</option>
+          </select>
+        </div>
         <div class="cell"><strong>Estado:</strong> <span id="snake-status">listo</span></div>
       </div>
       <div class="row">
@@ -79,7 +90,6 @@
         <span class="tag">Controles: ← → ↑ ↓ (mover) · P (pausa)</span>
       </div>
       <pre id="snake-screen" class="screen">Ready.</pre>
-      <div class="help">Come “*” para sumar. Chocar con pared o contigo termina la partida.</div>
 
       <div class="lb">
         <div class="lb-head">
@@ -87,7 +97,7 @@
           <button id="snake-reset" class="btn danger">Reset</button>
         </div>
         <table>
-          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th></tr></thead>
+          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th><th>Seed</th></tr></thead>
           <tbody id="snake-lb"></tbody>
         </table>
       </div>
@@ -101,6 +111,12 @@
         <div class="cell"><strong>Score:</strong> <span id="tetris-score">0 → ×1.25</span></div>
         <div class="cell"><strong>Total:</strong> <span id="tetris-total">0</span></div>
         <div class="cell"><strong>Dificultad:</strong> <span id="tetris-diff">normal ×1.25</span></div>
+        <div class="cell"><strong>Modo:</strong> 
+          <select id="tetris-mode">
+            <option value="marathon" selected>Marathon</option>
+            <option value="practice">Practice</option>
+          </select>
+        </div>
         <div class="cell"><strong>Estado:</strong> <span id="tetris-status">listo</span></div>
       </div>
       <div class="row">
@@ -117,7 +133,6 @@
         <span class="tag">Controles: ← → (mover) · ↑ (rotar) · ↓ (caer) · P (pausa)</span>
       </div>
       <pre id="tetris-screen" class="screen">Ready.</pre>
-      <div class="help">Puntuación por líneas eliminadas (piezas: I, O, L, T).</div>
 
       <div class="lb">
         <div class="lb-head">
@@ -125,7 +140,7 @@
           <button id="tetris-reset" class="btn danger">Reset</button>
         </div>
         <table>
-          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th></tr></thead>
+          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th><th>Seed</th></tr></thead>
           <tbody id="tetris-lb"></tbody>
         </table>
       </div>
@@ -139,6 +154,12 @@
         <div class="cell"><strong>Score:</strong> <span id="road-score">0 → ×1.25</span></div>
         <div class="cell"><strong>Total:</strong> <span id="road-total">0</span></div>
         <div class="cell"><strong>Dificultad:</strong> <span id="road-diff">normal ×1.25</span></div>
+        <div class="cell"><strong>Modo:</strong> 
+          <select id="road-mode">
+            <option value="marathon" selected>Marathon</option>
+            <option value="practice">Practice</option>
+          </select>
+        </div>
         <div class="cell"><strong>Estado:</strong> <span id="road-status">listo</span></div>
       </div>
       <div class="row">
@@ -155,7 +176,6 @@
         <span class="tag">Controles: ← → (mover) · P (pausa)</span>
       </div>
       <pre id="road-screen" class="screen">Ready.</pre>
-      <div class="help">Evita obstáculos. Puntaje por distancia y sobrepasos.</div>
 
       <div class="lb">
         <div class="lb-head">
@@ -163,7 +183,7 @@
           <button id="road-reset" class="btn danger">Reset</button>
         </div>
         <table>
-          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th></tr></thead>
+          <thead><tr><th>#</th><th>Nombre</th><th>Best</th><th>Dif.</th><th>Seed</th></tr></thead>
           <tbody id="road-lb"></tbody>
         </table>
       </div>
@@ -171,9 +191,23 @@
   </main>
 
   <footer class="bar small muted">
-    <span>Guardado local (navegador). El botón Reset borra el Top 10 del juego.</span>
+    <span>Guardado local (navegador). Reset borra el Top 10 del juego actual.</span>
   </footer>
+
+  <!-- Modal retro para nombre de récord -->
+  <div id="name-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <h3>¡Nuevo récord!</h3>
+      <p id="modal-desc" class="small muted">Ingresa tu nombre (máx 10 caracteres)</p>
+      <input id="name-input" maxlength="10" autocomplete="off" class="modal-input" placeholder="ANON" />
+      <div class="row" style="margin-top:10px">
+        <button id="name-ok" class="btn primary">Guardar</button>
+        <button id="name-cancel" class="btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
 </html>
+
